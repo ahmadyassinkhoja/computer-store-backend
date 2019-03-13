@@ -67,19 +67,19 @@ app.post('/addOrder', (req, res) => {
     const {purchasedProducts, total_price, total_quantity } = req.body;
     
     console.log(purchasedProducts, total_price, total_quantity)
-    // const order = {
-    //     products: purchasedProducts,
-    //     total_price: total_price,
-    //     total_quantity: total_quantity,
-    //     date: getTodayDate(),
-    //     time: getTodayTime(),
-    //     created_at: getTodayDateTime(),
-    //     // phone_number: user.phone_number,
-    //     // user_name: user.name,
-    //     // user_address: user.address,
-    // }
+    const order = {
+        products: purchasedProducts,
+        total_price: total_price,
+        total_quantity: total_quantity,
+        date: getTodayDate(),
+        time: getTodayTime(),
+        created_at: getTodayDateTime(),
+        // phone_number: user.phone_number,
+        // user_name: user.name,
+        // user_address: user.address,
+    }
 
-    // ORDERS_COLLECTION.insertOne(order, function (err, result) {
-    //     console.log(result)
-    // })
+    ORDERS_COLLECTION.insertOne(order, function (err, result) {
+        console.log(result)
+    })
 })
