@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongodb from 'mongodb';
 
+import { getTodayDate, getTodayTime, getTodayDateTime } from './scripts'
+
 const port = 8500;
 
 let app = express();
@@ -10,9 +12,8 @@ const mongoUrl =
   'mongodb://ahmadyassin:ahmad12345@ds249372.mlab.com:49372/computer-store';
 let computer_store_db;
 let ITEMS_COLLECTION;
-// let ADMIN_USERS_COLLECTION;
+let ORDERS_COLLECTION;
 // let CLIENT_USERS_COLLECTION;
-// let ORDERS_COLLECTION;
 
 mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true }, function(
     err,
@@ -23,9 +24,8 @@ mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true }, function(
     }
     computer_store_db = database.db('computer-store');
     ITEMS_COLLECTION = computer_store_db.collection('items');
-    // ADMIN_USERS_COLLECTION = computer_store_db.collection('admin_users');
+    ORDERS_COLLECTION = computer_store_db.collection('orders');
     // CLIENT_USERS_COLLECTION = computer_store_db.collection('client_users');
-    // ORDERS_COLLECTION = computer_store_db.collection('orders');
 
     console.log('🌀  Database connection ready 💥 ⚡');
 
@@ -62,3 +62,24 @@ app.get('/items', (req, res) => {
         res.send(items)
     })
 });
+
+app.post('/addOrder', (req, res) => {
+    const {purchasedProducts, total_price, total_quantity } = req.body;
+    
+    console.log(purchasedProducts, total_price, total_quantity)
+    // const order = {
+    //     products: purchasedProducts,
+    //     total_price: total_price,
+    //     total_quantity: total_quantity,
+    //     date: getTodayDate(),
+    //     time: getTodayTime(),
+    //     created_at: getTodayDateTime(),
+    //     // phone_number: user.phone_number,
+    //     // user_name: user.name,
+    //     // user_address: user.address,
+    // }
+
+    // ORDERS_COLLECTION.insertOne(order, function (err, result) {
+    //     console.log(result)
+    // })
+})
