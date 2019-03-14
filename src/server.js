@@ -8,6 +8,9 @@ const port = 8500;
 
 let app = express();
 
+// getting id
+var ObjectID = mongodb.ObjectID;
+
 const mongoUrl =
   'mongodb://ahmadyassin:ahmad12345@ds249372.mlab.com:49372/computer-store';
 let computer_store_db;
@@ -63,6 +66,12 @@ app.get('/items', (req, res) => {
     })
 });
 
+app.get('/orders', (req, res) => {
+    ORDERS_COLLECTION.find({}).toArray( (err, orders) => {
+        res.send(orders)
+    })
+});
+
 app.post('/addOrder', (req, res) => {
     const {purchasedProducts, total_price, total_quantity } = req.body;
     
@@ -80,6 +89,45 @@ app.post('/addOrder', (req, res) => {
     }
 
     ORDERS_COLLECTION.insertOne(order, function (err, result) {
-        console.log(result)
+        res.send(result)
     })
+})
+
+app.post('/addItem', (req, res) => { 
+    const item = req.body
+
+    ITEMS_COLLECTION.insertOne(item, function (err, result) {
+        res.send(result)
+    })
+})
+
+app.put('/editItem/:id', (req, res) => {
+    const myQuery =  { _id: ObjectID(req.params.id) }
+
+    const item = {
+        'name': req.body.name,
+        'price': req.body.price,
+        'model_number': req.body.model_number,
+        'color': req.body.color,
+        'processor': req.body.processor,
+        'ram': req.body.ram,
+        'memory': req.body.memory,
+        'vga': req.body.vga,
+        'operating_system': req.body.operating_system,
+        'brand': req.body.brand,
+        'category': req.body.category,
+        'picture': req.body.picture,
+        'quantity': 0,
+    }
+
+    const newValue = {$set: item}
+    ITEMS_COLLECTION.findOneAndUpdate( myQuery, newValue )
+
+    res.send('Item Updated Successfully')
+})
+
+app.delete('/removeItem/:id', (req, res) => {
+    ITEMS_COLLECTION.remove( { _id: ObjectID(req.params.id) } )
+
+    res.send('Item Removed Successfully')
 })
