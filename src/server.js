@@ -83,9 +83,6 @@ app.post('/addOrder', (req, res) => {
         date: getTodayDate(),
         time: getTodayTime(),
         created_at: getTodayDateTime(),
-        // phone_number: user.phone_number,
-        // user_name: user.name,
-        // user_address: user.address,
     }
 
     ORDERS_COLLECTION.insertOne(order, function (err, result) {
