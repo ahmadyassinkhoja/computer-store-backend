@@ -8,15 +8,6 @@
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](<>)
 
-<!-- [![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
-![discord](https://img.shields.io/discord/497486687681773579.svg?style=for-the-badge) -->
-
-> You Can Join US at Ciatek Server at Discord
-> [![Discord](https://discordapp.com/api/guilds/497486687681773579/widget.png)](https://discord.gg/Y9hjA3T)
->
-> Click Here to See this Project Live  
-> [![N|Solid](images/minimall.jpg)](https://supermarket-1542828174855.firebaseapp.com/client)
-
 ## Getting Started
 
 > This is a living document, so please check back occasionally for changes. Any major changes will be communicated to the team.
