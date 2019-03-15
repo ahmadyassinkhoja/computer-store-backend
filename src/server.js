@@ -6,7 +6,7 @@ import { getTodayDate, getTodayTime, getTodayDateTime } from './scripts'
 
 const port = 8500;
 
-let app = express();
+const app = express();
 
 // getting id
 var ObjectID = mongodb.ObjectID;

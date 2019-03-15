@@ -5,13 +5,13 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon src/server.js --ext js --exec babel-node",
-    "start": "npm run build && node ./build/server.js",
-    "build": "npm run build-babel",
+    "start": "npm run build-babel && node ./build/server.js",
     "build-babel": "babel -d ./build ./src -s"
   },
   "author": "Ahmad Khoja",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
@@ -23,7 +23,6 @@
     "nodemon": "^1.18.9"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "braces": "2.3.2",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
