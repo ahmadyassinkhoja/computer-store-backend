@@ -4,7 +4,7 @@
 
 [![Known Vulnerabilities](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend?targetFile=package.json)
 [![Build Status](https://travis-ci.com/ahmadyassinkhoja/computer-store-backend.svg?branch=master)](https://travis-ci.com/ahmadyassinkhoja/computer-store-backend.svg?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1409690a371c4279b814d3173d04919d)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=ahmadyassinkhoja/supermarket-back-end-&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/238dba77a9b54077bade471ee7edd2d8)](https://www.codacy.com/app/ahmadyassinkhoja/computer-store-backend?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ahmadyassinkhoja/computer-store-backend&amp;utm_campaign=Badge_Grade)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](<>)
 
