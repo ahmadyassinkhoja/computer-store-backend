@@ -16,7 +16,6 @@ const mongoUrl =
 let computer_store_db;
 let ITEMS_COLLECTION;
 let ORDERS_COLLECTION;
-// let CLIENT_USERS_COLLECTION;
 
 mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true }, function(
     err,
@@ -28,7 +27,6 @@ mongodb.MongoClient.connect(mongoUrl, { useNewUrlParser: true }, function(
     computer_store_db = database.db('computer-store');
     ITEMS_COLLECTION = computer_store_db.collection('items');
     ORDERS_COLLECTION = computer_store_db.collection('orders');
-    // CLIENT_USERS_COLLECTION = computer_store_db.collection('client_users');
 
     console.log('🌀  Database connection ready 💥 ⚡');
 
@@ -75,7 +73,6 @@ app.get('/orders', (req, res) => {
 app.post('/addOrder', (req, res) => {
     const {purchasedProducts, total_price, total_quantity } = req.body;
     
-    console.log(purchasedProducts, total_price, total_quantity)
     const order = {
         products: purchasedProducts,
         total_price: total_price,
