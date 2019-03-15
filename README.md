@@ -1,12 +1,8 @@
 # Computer Store Project BackEnd
 
- <!--I m using this cause Synk Co. doesn't provide for private repo's But it's true in our repo 😉-->
-
 [![Known Vulnerabilities](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend?targetFile=package.json)
 [![Build Status](https://travis-ci.com/ahmadyassinkhoja/computer-store-backend.svg?branch=master)](https://travis-ci.com/ahmadyassinkhoja/computer-store-backend.svg?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/238dba77a9b54077bade471ee7edd2d8)](https://www.codacy.com/app/ahmadyassinkhoja/computer-store-backend?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ahmadyassinkhoja/computer-store-backend&amp;utm_campaign=Badge_Grade)
-[![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](<>)
 
 ## Getting Started
 
@@ -17,17 +13,6 @@
 -   Remote repository is hosted on GitHub
 -   Use `npm`, not `yarn`
 -   `eslint` standards will be enforced using a modified Airbnb style guide
--   Use project structure defined below
--   **Do not** commit `node_modules` files or other sensitive information
--   **Do not** commit changes directly to the `master` branch
--   ..Commit changes via a branch named as follows:
--   ..`year-month-module-feature`
--   `year` should be a number, two digit year in which branch was created
--   `month` should be a number, two digit month in which branch was created
--   `module` should be camel case, starts with a lower case letter
--   `feature` should be sentence case, starts with upper case letter
--   If the feature is not for a single module then use `general`
--   Examples are `18-11-accounting-Add Account graphQL type` or `19-01-general-Add User graphQL type`
 
 ### Visual Studio Code
 
@@ -48,14 +33,14 @@
 ## Installing
 
 <pre>
-These steps will allow for local development of the _application_ on your machine.
+These steps will allow for local development of the application on your machine.
 </pre>
 
 1.  Make sure you already have `npm`, and `node` (version 10 or greater) installed
 2.  Clone this repository
 3.  Run `npm install` from the project root
-4.  Run `npm start` to start the server locally
-5.  In your browser open `http://localhost:8530/` to access the application
+4.  Run `npm run dev` to start the server locally
+5.  In your browser open `http://localhost:8500/` to access the application
 
 ## Deploying
 
@@ -69,7 +54,7 @@ List of commands found in `package.json`. Most of the actions you need to perfor
 
 `npm run dev` - start development server locally and watch for changes
 
-`npm run build` - output into `dist` directory for production
+`npm run build` - output into `build` directory for production
 
 `npm start` - build and start the application on heroku
 
@@ -79,25 +64,14 @@ This structure is important because it will alleviate issues when we attempt to 
 
 Of course, the project structure will change as the project grows. But we will make any structural change decisions as a team when needed.
 
-    ├── dist
     ├── node_modules
     ├── src
-    │   ├── database
-    │   │   ├── mongodb.js
-    │   │   └── msdb.js
-    │   ├── errors
-    │   │   └── custom-error.js
-    │   ├── admin.js
-    │   ├── client.js
-    │   ├── communicationAPI.js
-    │   ├── items.js
-    │   ├── orders.js
-    │   ├── scripts.js
     │   ├── server.js
-    │   └── setting.js
+    │   └── scripts.js
     ├── .babelrc
     ├── .eslintrc.js
     ├── .gitignore
+    ├── .travis.yml
     ├── package-lock.json
     ├── package.json
     └── README.md
