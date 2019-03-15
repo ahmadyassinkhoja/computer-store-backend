@@ -2,7 +2,7 @@
 
  <!--I m using this cause Synk Co. doesn't provide for private repo's But it's true in our repo 😉-->
 
-[![Known Vulnerabilities](https://snyk.io/test/github/dwyl/hapi-auth-jwt2/badge.svg?targetFile=package.json)](https://snyk.io/test/github/dwyl/hapi-auth-jwt2?targetFile=package.json)
+[![Known Vulnerabilities](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend/badge.svg?targetFile=package.json)](https://snyk.io/test/github/ahmadyassinkhoja/computer-store-backend?targetFile=package.json)
 [![Build Status](https://travis-ci.com/ahmadyassinkhoja/supermarket-back-end-.svg?token=qygxqkdc5qqrxr91xxDH&branch=master)](https://travis-ci.com/ahmadyassinkhoja/supermarket-back-end-)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1409690a371c4279b814d3173d04919d)](https://www.codacy.com?utm_source=github.com&utm_medium=referral&utm_content=ahmadyassinkhoja/supermarket-back-end-&utm_campaign=Badge_Grade)
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
