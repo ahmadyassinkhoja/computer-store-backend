@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src/server.js --ext js --exec babel-node",
     "start": "npm run build-babel && node ./build/server.js",
-    "build-babel": "babel -d ./build ./src -s"
+    "build-babel": "babel -d ./build ./src -s",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Ahmad Khoja",
   "license": "MIT",
@@ -20,7 +22,8 @@
     "mongodb": "^3.1.10",
     "node": "^11.1.0",
     "node-bin-setup": "^1.0.6",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "braces": "2.3.2",
@@ -38,5 +41,6 @@
     "**/dist",
     "**/generated",
     "**/build"
-  ]
+  ],
+  "snyk": true
 }
