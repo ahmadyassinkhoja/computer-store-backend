@@ -16,7 +16,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongodb": "^3.1.10",
     "node": "^11.1.0",
     "node-bin-setup": "^1.0.6",
